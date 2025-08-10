@@ -3,119 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburguesas & Alitas BBQ - El Barril</title>
-
-    <!-- Descripción para Google -->
+    <title>Hamburguesas & Alitas BBQ</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <meta name="description" content="Las mejores hamburguesas y alitas de la ciudad, hechas con pasión y sabor único.">
-
-    <!-- Favicon -->
-    <link rel="icon" href="https://el-barril.vercel.app/logo.png" type="image/png">
-
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn, etc.) -->
-    <meta property="og:title" content="Hamburguesas & Alitas BBQ - El Barril">
-    <meta property="og:description" content="Las mejores hamburguesas y alitas de la ciudad, hechas con pasión y sabor único.">
-    <meta property="og:image" content="https://el-barril.vercel.app/logo.png">
-    <meta property="og:url" content="https://el-barril.vercel.app/">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hamburguesas & Alitas BBQ - El Barril">
-    <meta name="twitter:description" content="Las mejores hamburguesas y alitas de la ciudad, hechas con pasión y sabor único.">
-    <meta name="twitter:image" content="https://el-barril.vercel.app/logo.png">
-
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff5e6;
-            color: #333;
+            font-family: Arial, sans-serif;
+            background: url('hamburParaLanding.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
         }
-
         header {
-            background-color: #b22222;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
         }
-
-        header h1 {
+        header img {
+            height: 60px;
+            width: auto;
+            margin-right: 10px;
+        }
+        header h2 {
+            font-size: 1.5rem;
             margin: 0;
-            font-size: 2rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
         }
-
-        .menu {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 1rem;
-            padding: 1rem;
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+            margin-bottom: 40px;
+            margin-top: 100px;
         }
-
-        .item {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-
-        .item h2 {
-            margin: 0.5rem 0;
+        .btn {
+            display: block;
+            width: 220px;
+            padding: 15px;
+            margin: 15px;
             font-size: 1.2rem;
-            color: #b22222;
-        }
-
-        .item p {
-            margin: 0.5rem 0;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #b22222;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
             color: white;
-            padding: 1rem;
-            margin-top: 1rem;
+            background-color: #e60000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #cc0000;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+                margin-top: 80px;
+            }
+            .btn {
+                width: 180px;
+                font-size: 1rem;
+            }
+            header img {
+                height: 45px;
+            }
+            header h2 {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Hamburguesas & Alitas BBQ</h1>
-        <p>El sabor que estabas buscando 🍔🍗</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" alt="Logo Restaurante">
+        <h2>EL BARRIL<br>Restaurante - Bar</h2>
     </header>
 
-    <section class="menu">
-        <div class="item">
-            <img src="hamburguesa1.jpg" alt="Hamburguesa Clásica">
-            <h2>Hamburguesa Clásica</h2>
-            <p>Jugosa carne 100% res, queso cheddar, lechuga y tomate.</p>
-            <p><strong>$18.000</strong></p>
-        </div>
+    <main>
+        <h1>Hamburguesas & Alitas BBQ</h1>
+        <a href="#menu" class="btn">📜 Ver Menú</a>
+        <a href="#pedido" class="btn">🛒 Hacer Pedido</a>
+        <h2>Tiempo de espera estimado</h2>
+    </main>
 
-        <div class="item">
-            <img src="alitasbbq.jpg" alt="Alitas BBQ">
-            <h2>Alitas BBQ</h2>
-            <p>Deliciosas alitas bañadas en salsa BBQ especial de la casa.</p>
-            <p><strong>$22.000</strong></p>
-        </div>
-
-        <div class="item">
-            <img src="hamburguesa2.jpg" alt="Hamburguesa Doble">
-            <h2>Hamburguesa Doble</h2>
-            <p>Doble carne, doble queso, y doble sabor.</p>
-            <p><strong>$25.000</strong></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>📍 Calle 123 #45-67, Ciudad | 📞 300 123 4567</p>
-        <p>© 2025 El Barril - Todos los derechos reservados</p>
-    </footer>
 </body>
 </html>
